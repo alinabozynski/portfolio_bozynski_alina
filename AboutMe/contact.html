@@ -1,0 +1,105 @@
+<!-------w---------
+
+    Project 3
+    Name: Alina Bozynski
+    Date: April 13 2022
+    Description: HTML for the Contact Page in Project 3: Website Development & Deployment (Module 9).
+
+------------------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Me</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Alina Bozynski</h1>
+      <h1>></h1>
+      <h1>Contact Me</h1>
+      <nav id="header">
+        <ul>
+          <li><a href="index.html">Meet Me</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="hobbies.html">Hobbies / Skills</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="wrapper">
+      <form id="comment_form" action="index.html">
+        <fieldset>
+          <legend>Do You Have Any Questions or Comments For Me?</legend>
+          <div class="formfield">
+            <label for="name" class="questions">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              size="40"
+              autofocus="autofocus"
+            />
+            <div class="questions_error error" id="name_error">
+              * Please enter a valid name.
+            </div>
+          </div>
+          <div class="formfield">
+            <label for="phone" class="questions">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              size="40"
+              maxlength="11"
+            />
+            <div class="questions_error error" id="phone_error">
+              * Please enter a valid phone number.
+            </div>
+          </div>
+          <div class="formfield">
+            <label for="email" class="questions">Email:</label>
+            <input type="email" id="email" name="email" size="40" />
+            <div class="questions_error error" id="email_error">
+              * Please enter a valid email.
+            </div>
+          </div>
+          <div class="formfield">
+            <label for="comment" class="questions"
+              >Questions/Comments... You can even leave a favourite memory of
+              yours! :)</label
+            >
+            <textarea
+              id="comment"
+              name="comment"
+              rows="4"
+              cols="100"
+            ></textarea>
+            <div class="questions_error error" id="comment_error">
+              * This field cannot be left blank.
+            </div>
+            <hr />
+          </div>
+          <div>
+            <input type="reset" value="Clear Information" />
+            <input type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Meet Me</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="hobbies.html">Hobbies / Skills</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+      <p>
+        Created By Alina Bozynski | Final WEBD-1007 Web Development 1 Project
+      </p>
+    </footer>
+  </body>
+</html>

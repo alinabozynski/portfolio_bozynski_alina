@@ -1,0 +1,60 @@
+/*******w***********
+
+    Competency 19
+    Name: Alina Bozynski
+    Date: March 27 2022
+    Description: Style sheet for Competency 19 (Module 8).
+
+*******************/
+
+body {
+  background: #aaa;
+  font-family: Calibri;
+}
+
+form {
+  width: 400px;
+  margin: 30px auto;
+  padding: 10px;
+  border: 3px #111 solid;
+  border-radius: 35px 25px 3px;
+  background: #ddd;
+  text-align: center;
+}
+
+form ol {
+  list-style: none;
+  margin: 10 auto;
+  padding: 0;
+}
+
+form label {
+  float: left;
+  width: 150px;
+  text-align: right;
+}
+
+form footer {
+  margin: 5px auto;
+  clear: both;
+  text-align: center;
+}
+
+form input[type="submit"] {
+  margin: 0px auto;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background: #bbb;
+  color: #000;
+}
+
+select#yearSelect {
+  display: none;
+}
+
+button#continue {
+  display: none;
+}
