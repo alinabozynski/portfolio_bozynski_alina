@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Java Classes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div
+      className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+    >
+      <span>
+        <a href="#"> Applicant Classes </a>
+      </span>
+      <nav
+        className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center"
+      >
+        <a href="#college"> College </a>
+        <a href="#undergrad"> Undergraduate </a>
+        <a href="#grad"> Graduate </a>
+      </nav>
+    </div>
+    <section id="college">
+      <div>
+        <h1>College Applicant</h1>
+        <h3>
+          <a href="./codeBlocks/CollegeApplicant.java"
+            >Click here to download the file</a
+          >
+        </h3>
+      </div>
+      <pre>
+  /**
+    * Name: Alina Bozynski
+    * Program: Full Stack Web Development
+    * Course: WEBD-1009 Programming 1
+    * Created: 04-07-2022
+    * Updated: 04-07-2022
+    */
+
+  /**
+    * Represents college applicants.
+    *
+    * @author Alina Bozynski
+    * @version 1.0
+    */
+
+  public abstract class CollegeApplicant
+  {
+    private String name;
+    private String college;
+
+    /**
+      * Initializes an instance of the CollegeApplicant class where
+      * the name and college are set to the specified values.
+      *
+      * @param name The name of the college applicant.
+      * @param college The name of the college.
+      */
+
+    public CollegeApplicant(String name, String college)
+    {
+      this.name = name;
+      this.college = college;
+    }
+
+    /**
+      * Initializes an instance of the CollegeApplicant class where
+      * the name and college are set to "unknown".
+      */
+
+    public CollegeApplicant()
+    {
+      this("unknown", "unknown");
+    }
+
+    /**
+      * Returns the college applicant's name.
+      *
+      * @return The college applicant's name.
+      */
+
+    public String getName()
+    {
+      return this.name;
+    }
+
+    /**
+      * Sets the college applicant's name.
+      *
+      * @param name The name of the college applicant.
+      */
+
+    public void setName(String name)
+    {
+      this.name = name;
+    }
+
+    /**
+      * Returns the name of the college.
+      *
+      * @return The name of the college.
+      */
+
+    public String getCollege()
+    {
+      return this.college;
+    }
+
+    /**
+      * Sets the name of the college.
+      *
+      * @param college The name of the college.
+      */
+
+    public void setCollege(String college)
+    {
+      this.college = college;
+    }
+
+    /**
+      * Returns a String representing the registration of a program.
+      *
+      * @param program The college program the applicant is registering for.
+      * @return A String representing the registration of a program.
+      */
+
+    public abstract String registerForProgram(String program);
+
+    /**
+      * Returns a String representation of the class.
+      *
+      * @return A String representation of the class.
+      */
+
+    @Override
+    public String toString()
+    {
+      return "=======================\nCollege Applicant\n=======================\nName:\t         "
+        + name + "\nCollege:\t " + college + "\n";
+    }
+  }
+      </pre>
+    </section>
+    <section id="undergrad">
+      <div>
+        <h1>Undergraduate Applicant</h1>
+        <h3>
+          <a href="./codeBlocks/UndergraduateApplicant.java"
+            >Click here to download the file</a
+          >
+        </h3>
+      </div>
+      <pre>
+  /**
+  * Name: Alina Bozynski
+  * Program: Full Stack Web Development
+  * Course: WEBD-1009 Programming 1
+  * Created: 04-07-2022
+  * Updated: 04-13-2022
+  */
+
+  /**
+    * Represents college undergraduate applicants.
+    *
+    * @author Alina Bozynski
+    * @version 1.0
+    */
+  public class UndergraduateApplicant extends CollegeApplicant
+  {
+    private double standardAptitudeTestScore;
+    private double gradePointAverage;
+
+    /**
+      * Initializes an instance of the UndergraduateApplicant class with the
+      * specified applicant name, college name, standard aptitude test score
+      * and grade point average.
+      *
+      * @param name The name of the college applicant.
+      * @param college The name of the college.
+      * @param standardAptitudeTestScore The score achieved on the standard aptitude test.
+      * Allowable values: 0.0 - 500.0 inclusive. If this field is set outside the
+      * allowable range, set the state to zero.
+      * @param gradePointAverage The applicants grade point average. Allowable values:
+      * 0.00 - 4.50 inclusive. If this field is set outside the allowable range, set
+      * the state to zero.
+      */
+    public UndergraduateApplicant(String name, String college,
+      double standardAptitudeTest, double gradePointAverage)
+    {
+      super(name, college);
+
+          String formatSAT = String.format("%.1f", standardAptitudeTest);
+
+          double formattedSAT = Double.parseDouble(formatSAT);
+
+      if(standardAptitudeTest >= 0.0 && standardAptitudeTest <= 500.0)
+      {
+        this.standardAptitudeTestScore = formattedSAT;
+      }
+      else if(standardAptitudeTest < 0.0 || standardAptitudeTest > 500.0)
+      {
+        this.standardAptitudeTestScore = 0.0;
+      }
+
+          String formatGPA = String.format("%.2f", gradePointAverage);
+
+          double formattedGPA = Double.parseDouble(formatGPA);
+
+      if(gradePointAverage >= 0.00 && gradePointAverage <= 4.50)
+      {
+        this.gradePointAverage = formattedGPA;
+      }
+      else if(gradePointAverage < 0.00 || gradePointAverage > 4.50)
+      {
+        this.gradePointAverage = 0.00;
+      }
+    }
+
+    /**
+      * Returns the standard aptitude test score.
+      *
+      * @return The standard aptitude test score.
+      */
+    public double getStandardAptitudeTestScore()
+    {
+      return this.standardAptitudeTestScore;
+    }
+
+    /**
+      * Sets the standard aptitude test score.
+      *
+      * @param score The score achieved on the standard aptitude test.
+      */
+    public void setStandardAptitudeTestScore(double score)
+    {
+      if(score >= 0.0 && score <= 500.0)
+      {
+        this.standardAptitudeTestScore = score;
+      }
+      else if(score < 0.0 || score > 500.0)
+      {
+        this.standardAptitudeTestScore = 0.0;
+      }
+    }
+
+    /**
+      * Returns the grade point average.
+      *
+      * @return The grade point average.
+      */
+    public double getGradePointAverage()
+    {
+      return this.gradePointAverage;
+    }
+
+    /**
+      * Sets the grade point average.
+      *
+      * @param gradePointAverage The applicants grade point average.
+      */
+    public void setGradePointAverage(double gradePointAverage)
+    {
+      if(gradePointAverage >= 0.00 && gradePointAverage <= 4.50)
+      {
+        this.gradePointAverage = gradePointAverage;
+      }
+      else if(gradePointAverage < 0.00 || gradePointAverage > 4.50)
+      {
+        this.gradePointAverage = 0.00;
+      }
+    }
+
+    /**
+      * Returns a String representing the registration of a program.
+      *
+      * @param program The college program the applicant is registering for.
+      * @return A String representing the registration of a program.
+      */
+    @Override
+    public String registerForProgram(String program)
+    {
+      String college = super.getCollege();
+
+      return college + " - " + program + " [" + this.standardAptitudeTestScore + "]";
+    }
+
+    /**
+      * Returns a String representation of the class.
+      *
+      * @return A String representation of the class.
+      */
+    @Override
+    public String toString()
+    {
+      String template = "%sSAT Score:\t %.1f%nGPA:\t         %.2f%n";
+
+      return String.format(template,
+                  super.toString(),
+                  this.standardAptitudeTestScore,
+                  this.gradePointAverage);
+    }
+  }
+      </pre>
+    </section>
+    <section id="grad">
+      <div>
+        <h1>Graduate Applicant</h1>
+        <h3>
+          <a href="./codeBlocks/GraduateApplicant.java"
+            >Click here to download the file</a
+          >
+        </h3>
+      </div>
+      <pre>
+  /**
+    * Name: Alina Bozynski
+    * Program: Full Stack Web Development
+    * Course: WEBD-1009 Programming 1
+    * Created: 04-07-2022
+    * Updated: 04-13-2022
+    */
+
+  /**
+    * Represents college graduate applicants.
+    *
+    * @author Alina Bozynski
+    * @version 1.0
+    */
+  public class GraduateApplicant extends CollegeApplicant
+  {
+    private String collegeOfOrigin;
+
+    /**
+      * Initializes an instance of the GraduateApplicant class
+      * with a specified name, college name, and college of origin.
+      *
+      * @param name The name of the college applicant.
+      * @param college The name of the college.
+      * @param collegeOfOrigin The name of the college where the graduate applicant received their degree.
+      */
+    public GraduateApplicant(String name, String college, String collegeOfOrigin)
+    {
+      super(name, college);
+      this.setCollegeOfOrigin(collegeOfOrigin);
+    }
+
+    /**
+      * Returns a string representing the applicant's college of origin.
+      *
+      * @return A String representing the applicant's college of origin.
+      */
+    public String getCollegeOfOrigin()
+    {
+      return this.collegeOfOrigin;
+    }
+
+    /**
+      * Sets the college of origin.
+      *
+      * @param collegeOfOrigin The name of the college where the graduate applicant received their degree.
+      */
+    public void setCollegeOfOrigin(String collegeOfOrigin)
+    {
+      this.collegeOfOrigin = collegeOfOrigin;
+    }
+
+    /**
+      * Returns true when the college name and the college of origin
+      * are the same (case is not a factor); otherwise returns false.
+      *
+      * @return Boolean value representing if the college name and college of origin are the same.
+      */
+    public boolean isInside()
+    {
+      String college = super.getCollege().toUpperCase();
+      String origin = this.collegeOfOrigin.toUpperCase();
+
+      if(college.equals(origin))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+
+    /**
+      * Returns a String representing the registration of a program.
+      *
+      * @param program The college program the applicant is registering for.
+      * @return A String representing the registration of a program.
+      */
+    @Override
+    public String registerForProgram(String program)
+    {
+      String college = super.getCollege();
+
+      return this.collegeOfOrigin + " > " + college + " - " + program;
+    }
+
+    /**
+      * Returns a String representation of the class.
+      *
+      * @return A String representation of the class.
+      */
+    @Override
+    public String toString()
+    {
+      String template = "%sOrigin:\t         %s";
+        return String.format(template,
+                    super.toString(),
+                    this.collegeOfOrigin);
+    }
+  }
+      </pre>
+    </section>
+  </body>
+</html>

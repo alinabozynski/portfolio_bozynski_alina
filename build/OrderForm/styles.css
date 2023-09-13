@@ -1,0 +1,64 @@
+@import "http://fonts.googleapis.com/css?family=Carrois+Gothic";
+
+* {
+  font-weight: 700;
+  font-family: "Courier New";
+}
+
+body {
+  margin: 0px 0px 20px 0px;
+  border-radius: 10px;
+}
+
+span > a {
+  border-right: none;
+}
+
+pre {
+  margin: 0% auto 3% auto;
+  width: 75%;
+}
+
+h1,
+h2 {
+  padding: 2px;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+table {
+  font-size: 14px;
+  border: 2px solid #000;
+  width: 580px;
+  margin: 0 auto 1em;
+  border-radius: 10px;
+  background-color: #858585;
+}
+
+td {
+  border: 1.5px solid #000;
+  padding: 2px;
+  margin: 3px;
+}
+
+.invoice {
+  border: #000 solid 2px;
+  padding: 5px;
+  width: 660px;
+  margin: 0 auto;
+  color: #000;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  margin: 0px auto 20px auto;
+}
+
+td > h3 {
+  margin: 8px auto;
+  padding: 5px 0px;
+}
+
+.right {
+  text-align: right;
+}

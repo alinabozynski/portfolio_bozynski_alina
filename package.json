@@ -1,0 +1,75 @@
+{
+  "name": "my-portfolio",
+  "version": "0.1.0",
+  "description": "Portfolio",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alinabozynski/portfolio_bozynski_alina.git"
+  },
+  "scripts": {
+    "start": "PORT=5575 craco start",
+    "build": "craco build",
+    "test": "prettier --check . && eslint ./",
+    "prettier": "prettier --check .",
+    "lint": "eslint ./",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --check . && eslint ./"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "type": "commonjs",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@craco/craco": "^5.9.0",
+    "@heroicons/react": "^1.0.1",
+    "bozynski_alina_ui_garden": "^1.1.0",
+    "node": "16.13.0",
+    "npm": "^9.3.1",
+    "php": "^1.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^2.1.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@types/styled-components": "^5.1.26",
+    "autoprefixer": "^9.8.6",
+    "bozynski_alina_ui_garden_build_checks": "github:bozzywozzy/bozynski_alina_ui_garden_build_checks",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "file-loader": "^6.2.0",
+    "husky": "^4.3.8",
+    "nginx": "^1.0.8",
+    "postcss": "^7.0.36",
+    "prettier": "^2.8.3",
+    "styled-components": "^5.3.6",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "NODE_OPTIONS": "--openssl-legacy-provider"
+}

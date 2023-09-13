@@ -1,0 +1,439 @@
+/******w***********
+    
+    Project 1 Stylesheet
+    Name: Alina Bozynski
+    Date: 2022-03-03
+    Description: This is the stylesheet for the Hayden Planetarium site (Module 5 - Project 1). 
+
+******************/
+* {
+  font-family: verdana;
+  transition: 1s;
+}
+
+html {
+  background-color: #e7e7e7;
+}
+
+body {
+  background-color: #fff;
+  border: 2px solid #bdbcbc;
+  border-radius: 12px;
+  padding: 20px 17px;
+  box-shadow: 2px -2px 2px #d1d1d1, -2px 2px 2px #d1d1d1;
+}
+
+body header div {
+  display: flex;
+  height: 88px;
+}
+
+body header div nav {
+  margin: 42px auto 0px auto;
+  font-size: 1.2em;
+}
+
+body header div nav ul {
+  display: flex;
+  list-style: none;
+}
+
+body header div nav ul #lastHeader,
+body nav ul #lastNav,
+body footer div nav ul #lastFooter {
+  border: none;
+}
+
+body header div nav ul li {
+  padding: 0px 15px;
+  border-right: 1px solid #448fb4;
+  height: 22px;
+  line-height: 20px;
+}
+
+body header div nav ul a,
+body section div article a,
+body footer div a {
+  color: #448fb4;
+}
+
+body header div nav ul a,
+body > nav ul a,
+body > aside nav ul a,
+body section div article a,
+body footer div a {
+  text-decoration: none;
+}
+
+li:hover,
+a:hover,
+a:focus {
+  color: #ca8451;
+}
+
+body header div span {
+  margin-top: 40px;
+  float: right;
+}
+
+body header div span label {
+  border: 1px solid #a6a6a6;
+  background-color: #eeeef0;
+  padding: 4px 13px;
+}
+
+body header div span input {
+  padding: 5.5px;
+}
+
+body > div {
+  display: block;
+  margin-top: -61px;
+  background-image: url(images/headerBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 340px;
+  color: #fff;
+}
+
+body > div p:first-of-type {
+  padding-top: 45px;
+  padding-left: 3.5%;
+  font-size: 3.8em;
+  letter-spacing: 10px;
+}
+
+body > div p:last-of-type {
+  float: right;
+  padding-top: 75px;
+  padding-right: 5%;
+  font-size: 1.4em;
+  letter-spacing: 3px;
+}
+
+body > nav {
+  display: flex;
+  font-size: 1.3em;
+  width: 100%;
+}
+
+body > nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-image: linear-gradient(to top, #1171a3, #91c3f5);
+  height: 25px;
+  margin: 0px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+body > nav ul li {
+  padding: 0px 18px;
+  border-right: 1px solid #1a658c;
+  border-right-style: groove;
+  height: 22px;
+  line-height: 20px;
+}
+
+body > nav ul li a {
+  color: #fff;
+}
+
+body section {
+  display: flex;
+  margin-bottom: 10%;
+}
+
+body section aside {
+  width: 930px;
+}
+
+body section aside nav {
+  margin-left: -40px;
+  margin-bottom: 72px;
+}
+
+body section aside nav ul {
+  list-style-position: inside;
+  margin-top: 0px;
+}
+
+body section aside nav ul li {
+  background-image: linear-gradient(to top, #cacaca 40%, #f7f6f6);
+  border-top: 2px solid #c4c4c4;
+  padding: 15px;
+  letter-spacing: 1px;
+}
+
+body section aside nav ul li:first-of-type {
+  list-style: none;
+}
+
+body section aside nav ul li a {
+  color: #565656;
+}
+
+body section aside p {
+  color: #8b8d8c;
+  font-size: 1.25em;
+  border-top: 2px solid #e2e2e2;
+  padding-top: 10px;
+  line-height: 30px;
+}
+
+body section aside p img {
+  float: right;
+  margin-left: 3px;
+}
+
+body section div {
+  left: 18%;
+  width: auto;
+  margin: -5px 1% 0px 0px;
+  padding-left: 35px;
+}
+
+body section div > p {
+  margin: 13px 0px 0px -10px;
+  padding-bottom: 20px;
+}
+
+body section div article h1 {
+  border-bottom: 2px solid #e2e2e2;
+  padding-bottom: 10px;
+  font-size: 2em;
+}
+
+body section div article h2 {
+  margin-top: -10px;
+  padding-bottom: 8px;
+  font-size: 1.4em;
+}
+
+body section div article p:not(#rover) {
+  line-height: 35px;
+  font-size: 1.3em;
+}
+
+#rover {
+  float: right;
+  width: 449px;
+  margin: 8px 10px 0px 10px;
+  padding: 10px;
+  border: 2px solid #d6d6d6;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+body section div article nav ul {
+  line-height: 65px;
+  font-size: 1.3em;
+  list-style: none;
+}
+
+body section a,
+footer a {
+  color: #448fb4;
+  text-decoration: none;
+}
+
+body footer {
+  line-height: 0.5px;
+  letter-spacing: 1px;
+  margin-bottom: -25px;
+}
+
+body footer div nav ul,
+body footer p {
+  display: flex;
+  justify-content: center;
+}
+
+body footer div nav ul {
+  list-style: none;
+  margin-left: -32px;
+}
+
+body footer div nav ul li {
+  padding: 0px 15px;
+  border-right: 1px solid #000;
+  height: 18px;
+  line-height: 15px;
+}
+
+body footer p a:first-of-type {
+  margin-left: 5px;
+}
+
+body footer p:last-of-type {
+  color: #9e9b95;
+  line-height: 15px;
+}
+
+body footer p:last-of-type a {
+  border-left: 1px solid #000;
+  padding-left: 15px;
+  margin-left: 15px;
+  height: 18px;
+  line-height: 15px;
+}
+
+@media (max-width: 1350px) {
+  * {
+    transition: 1s;
+  }
+
+  body {
+    padding: 15px 12px;
+  }
+
+  body header div {
+    height: 50px;
+  }
+
+  body header div nav {
+    font-size: 1em;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    right: 10%;
+  }
+
+  body header div nav ul {
+    flex-wrap: wrap;
+  }
+
+  body header div span {
+    position: absolute;
+    top: -1%;
+    right: 22px;
+  }
+
+  body > div {
+    height: 100px;
+    margin-top: 70px;
+  }
+
+  body > div p:first-of-type {
+    font-size: 1.1em;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+  }
+
+  body > div p:last-of-type {
+    font-size: 0.85em;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  body > nav {
+    font-size: 0.9em;
+  }
+
+  body > nav ul {
+    flex-wrap: wrap;
+    height: auto;
+    font-size: 1.1em;
+  }
+
+  body > nav ul li {
+    height: 20px;
+    line-height: 18px;
+  }
+
+  body section {
+    margin-bottom: 20%;
+  }
+
+  body section aside {
+    width: 28%;
+  }
+
+  body section aside nav {
+    font-size: 0.6em;
+  }
+
+  body section aside nav ul li {
+    padding: 8px;
+  }
+
+  body section aside p {
+    font-size: 0.8em;
+    line-height: 16px;
+  }
+
+  body section aside p img {
+    display: block;
+    height: 50%;
+    width: auto;
+  }
+
+  body section div {
+    width: 70%;
+    padding-left: 3%;
+  }
+
+  body section div > p {
+    padding-bottom: 1px;
+    font-size: 0.65em;
+  }
+
+  body section div article h1 {
+    padding-bottom: 3px;
+    font-size: 1em;
+  }
+
+  body section div article h2 {
+    padding-bottom: 5px;
+    font-size: 0.8em;
+  }
+
+  body section div article p:not(#rover) {
+    line-height: 25px;
+    font-size: 0.8em;
+  }
+
+  #rover {
+    display: block;
+    width: 260px;
+    height: auto;
+    padding: 5px;
+    font-size: 0.6em;
+    margin-bottom: 20px;
+    margin-top: 7px;
+  }
+
+  #rover img {
+    display: block;
+    width: 100%;
+    height: 80%;
+  }
+
+  body section div article nav ul {
+    line-height: 35px;
+    font-size: 0.8em;
+  }
+
+  body footer {
+    font-size: 0.6em;
+    margin-bottom: -20px;
+  }
+
+  body footer div nav ul,
+  body footer p {
+    flex-wrap: wrap;
+  }
+
+  body footer div nav ul li {
+    padding: 0px 5px;
+  }
+
+  body footer p:last-of-type a {
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+}

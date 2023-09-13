@@ -1,0 +1,46 @@
+/* Style sheet for parkingTickets.html */
+* {
+  /* background-color: #A2937A; */
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 80%;
+  height: 100%;
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 0% 7% 2% 7%;
+  margin: 2% auto 3% auto;
+}
+
+img {
+  width: 20%;
+  height: 15%;
+  float: right;
+  margin-top: -5%;
+}
+
+input:first-of-type {
+  background-color: #eab286;
+}
+
+#submit:hover {
+  background-color: #eab286;
+  transition: 0.2s;
+}
+
+a,
+a:visited {
+  color: #df6403;
+}
+
+h2,
+h5 {
+  font-weight: lighter;
+  margin-top: -1%;
+}
+
+ul li {
+  list-style: none;
+}

@@ -1,0 +1,604 @@
+/******w***********
+    
+    Project 3 Stylesheet
+    Name: Alina Bozynski
+    Date: April 11 2022
+    Description: Style sheet for Project 3: Website Development & Deployment (Module 9).
+
+******************/
+
+/* Elements on more than one page */
+* {
+  background-color: #d2ffd3;
+  width: auto;
+  font-family: monospace, sans-serif;
+  transition: 0.8s;
+}
+
+h2,
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 1350px;
+  align-content: center;
+  margin: 0px auto;
+  padding-top: 30px;
+}
+
+header {
+  background-color: #e7c7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px groove #ce8cfe;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  padding: 0px 10px;
+  background-color: #e7c7ff;
+}
+
+header nav,
+header nav ul,
+header nav ul li {
+  background-color: #e7c7ff;
+}
+header nav ul li a {
+  border: 3px groove #ce8cfe;
+  padding: 7px 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding-right: 20px;
+}
+
+nav ul li a {
+  color: #6e3ba8;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  background-color: #6e3ba8;
+  color: #fff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+body footer {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 0.85em;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -25px;
+  margin-left: -40px;
+}
+
+footer nav ul li {
+  padding-left: 20px;
+  border-right: 2px solid #000;
+}
+
+footer nav ul li:last-of-type {
+  border: none;
+}
+
+footer nav ul li a {
+  padding: 7px 15px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+}
+
+/* Elements on the Home Page (Meet Me) */
+body > .gallery {
+  margin-left: 15px;
+}
+
+body div #intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro section:first-of-type {
+  width: 600px;
+  margin-left: 50px;
+}
+
+#intro section:last-of-type {
+  width: 600px;
+  margin: -16px 50px 0px auto;
+}
+
+body div #introPics {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#introPics div {
+  width: 350px;
+  height: 625px;
+  background-color: #e7c7ff;
+  margin: 10px;
+  border: 24px solid #fff;
+}
+
+#introPics div p {
+  margin-top: 2px;
+  background-color: #e7c7ff;
+  padding: 10px;
+}
+
+body div div #job {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#job div {
+  margin: 20px;
+}
+
+#job #jobWriteUp {
+  width: 300px;
+}
+
+/* Elements on the Education Page */
+body #education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#education section {
+  margin: 0px 40px;
+}
+
+#education section:first-of-type {
+  margin-top: -52px;
+}
+
+body div #photos {
+  align-items: center;
+  height: 40px;
+  background-color: #fff;
+}
+
+/* Elements on the Hobbies/Skills Page */
+body div #nature1 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+body div #panorama {
+  padding-left: 2%;
+}
+
+body div #hobbies {
+  margin-top: -20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.2em;
+}
+
+body div #nature2,
+body div #nature3 {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+body #creativity #art > div {
+  width: 400px;
+  padding-right: 15px;
+}
+
+body #creativity #art > div > p {
+  width: 435px;
+}
+
+body #creativity #art > img:last-of-type {
+  padding-left: 15px;
+}
+
+body section #guitars {
+  display: flex;
+  justify-content: center;
+  margin-top: -45px;
+}
+
+#guitars section {
+  padding: 70px;
+}
+
+#guitars > div {
+  margin: 30px 0px 0px 150px;
+  align-content: center;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 200, 172, 1),
+    rgba(150, 128, 172, 1) 70%,
+    rgba(0, 128, 172, 0) 70.3%
+  );
+  height: 350px;
+  width: 350px;
+}
+
+#guitars div #skills {
+  margin-top: 12%;
+  background-color: transparent;
+}
+
+#skills h2,
+#skills h3,
+#skills div ul,
+#skills div ul li {
+  background-color: transparent;
+}
+
+#skills div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding-left: 60px;
+}
+
+/* Elements on the Contact Me Page */
+body div form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form fieldset,
+fieldset .formfield,
+.formfield label,
+.formfield .error,
+fieldset div:last-of-type {
+  background-color: #dadada;
+}
+.formfield {
+  padding: 5px 0px;
+}
+
+fieldset div .error {
+  color: #ff0000;
+  font-size: 1em;
+}
+
+fieldset div input,
+fieldset div textarea {
+  background-color: #fff;
+}
+
+#wrapper form fieldset div label {
+  margin-left: 10px;
+}
+
+.formfield:first-of-type label {
+  margin-right: 71px;
+}
+
+input:focus {
+  background-color: #e7c7ff;
+  color: #0060df;
+}
+
+.formfield:focus-within {
+  color: #0060df;
+}
+
+#email {
+  margin-left: 62px;
+}
+
+textarea {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+/*
+					#reset:hover, #reset:active, #sumbit:hover, #submit:active{
+						background-color: #E7C7FF;
+					}
+*/
+
+@media (max-width: 640px) {
+  /* Elements on more than one page */
+  body {
+    width: 500px;
+  }
+
+  header {
+    position: fixed;
+    border: none;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -80px;
+    width: 650px;
+    height: auto;
+    border-top: 2px groove #ce8cfe;
+  }
+
+  header h1 {
+    padding: 0px 5px;
+    font-size: 1.5em;
+  }
+
+  header nav {
+    position: fixed;
+    top: 50px;
+    border-top: 2px groove #ce8cfe;
+    border-bottom: 2px groove #ce8cfe;
+    margin-top: 10px;
+    width: 650px;
+    padding-left: 100px;
+  }
+
+  header nav ul li {
+    padding: 0px 5px;
+  }
+
+  header nav ul li a {
+    border: 2px groove #ce8cfe;
+    padding: 4px 5px;
+    font-size: 1em;
+  }
+
+  body > div:first-of-type {
+    padding-top: 100px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  body footer {
+    font-size: 0.7em;
+  }
+
+  footer nav {
+    margin-bottom: -10px;
+  }
+
+  footer nav ul li {
+    border-right: 1px solid #000;
+  }
+
+  footer nav ul li a {
+    padding: 7px 5px;
+  }
+
+  /* Elements on the Home Page (Meet Me) */
+  body div #intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #intro section:first-of-type {
+    width: 600px;
+    margin-left: 10px;
+  }
+
+  #intro section:first-of-type h2 {
+    display: block;
+  }
+
+  #intro section:last-of-type {
+    width: 600px;
+    margin: -45px 10px 0px 15px;
+  }
+
+  body div #introPics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #introPics div {
+    width: 400px;
+    height: 650px;
+    border: 24px solid #fff;
+  }
+
+  #introPics div img {
+    width: 400px;
+    height: 500px;
+  }
+
+  #introPics div p {
+    display: flex;
+    justify-content: center;
+  }
+
+  body div div #job {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #job div {
+    margin: 10px;
+  }
+
+  #job > div:first-of-type {
+    order: 3;
+  }
+
+  #job #jobWriteUp {
+    width: 400px;
+  }
+
+  /* Elements on the Education Page */
+  body #education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px;
+  }
+
+  /* Elements on the Hobbies/Skills Page */
+  body #nature #nature1,
+  #nature #nature2,
+  #nature #nature3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8% auto 0px 10%;
+  }
+
+  body #nature #nature1 img,
+  #nature #nature2 img,
+  #nature #nature3 img {
+    width: 400px;
+    height: auto;
+  }
+
+  #panorama {
+    display: none;
+  }
+
+  body #nature div #outdoors {
+    margin-left: 50px;
+  }
+
+  body div #hobbies {
+    font-size: 0.9em;
+    margin-left: 20px;
+  }
+
+  body #creativity #art {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #creativity #art > img:first-of-type {
+    order: 2;
+    height: 400px;
+    margin-left: 13px;
+  }
+
+  #creativity #art div {
+    order: 1;
+    width: 450px;
+    margin-left: -35px;
+  }
+
+  #creativity #art > img:last-of-type {
+    order: 3;
+    height: 400px;
+    padding-bottom: 20px;
+  }
+
+  body #creativity #guitars:not(div) {
+    display: flex;
+    justify-content: center;
+  }
+
+  #guitars > section {
+    margin-top: -5px;
+    padding-bottom: 350px;
+  }
+
+  #guitars > section:first-of-type {
+    padding-left: 230px;
+  }
+
+  #guitars div {
+    position: relative;
+    right: 300px;
+    top: 300px;
+  }
+
+  #guitars > div {
+    margin: 200px 0px 0px -75px;
+    height: 275px;
+    width: 300px;
+  }
+
+  #guitars div #skills h2 {
+    margin-bottom: -15px;
+  }
+
+  #guitars div #skills h2,
+  #skills h3 {
+    position: relative;
+    bottom: 295px;
+    left: 300px;
+  }
+
+  #skills div ul {
+    position: relative;
+    left: 560px;
+    bottom: 625px;
+  }
+
+  /* Elements on the Contact Me Page */
+  body #wrapper {
+    width: 300px;
+    padding: 110px 0px 100px 100px;
+  }
+
+  #wrapper form fieldset div:not(div:last-of-type) {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+  }
+
+  #wrapper form fieldset div:last-of-type {
+    display: flex;
+    justify-content: center;
+  }
+
+  input,
+  #email,
+  textarea {
+    margin-left: 10px;
+  }
+}

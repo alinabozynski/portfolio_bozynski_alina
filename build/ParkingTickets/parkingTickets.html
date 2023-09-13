@@ -1,0 +1,33 @@
+<!-- Parking Tickets HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parking Tickets</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Parking Tickets in the City of Winnipeg</h1>
+    <img src="tickets.jpg" alt="Parking Tickets on Windshield" />
+    <h2>View parking tickets given on a specific street.</h2>
+    <h5>
+      Data provided by
+      <a
+        href="https://data.winnipeg.ca/Parking/Parking-Contravention-Citations-/bhrt-29rb"
+        >City Of Winnipeg Open Data Catalogue</a
+      >
+    </h5>
+
+    <form id="form" method="POST">
+      <label for="street">Street Name: </label>
+      <input type="text" id="street" name="street" />
+      <input id="submit" type="submit" />
+    </form>
+
+    <script type="text/javascript" src="parkingTickets.js"></script>
+  </body>
+</html>
