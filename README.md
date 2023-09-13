@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Requirements
 
-- Node.js
-- npm
+- Node.js (v12.22.12)
+- npm (6.14.16)
 
 ## Run this application on localhost:5575
 
@@ -46,16 +46,16 @@ To create a Docker image, run: `docker build -t <desired_image_name> .`\
 Then run the image as a container: `docker run --name <desired_container_name> -it -p 5575:80 --rm <image_name>`\
 Now open localhost:5575 in a browser!
 
-## Pushing to this repo automatically creates an image. Pull and run the application image from my Hub.
+## Pull and run the application image from my Hub.
 
 Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.\
 
 ```
-docker pull abozynski/bozynski_alina_portfolio
+docker pull abozynski/portfolio_bozynski_alina
 ```
 
 ```
-docker run --name <desired_container_name> -it -p 5575:80 --rm abozynski/bozynski_alina_portfolio
+docker run --name <desired_container_name> -it -p 5575:80 --rm abozynski/portfolio_bozynski_alina
 ```
 
 Now open localhost:5575 in a browser!
@@ -74,7 +74,7 @@ You will also see any lint errors in the console.
 
 ### `npm run test`
 
-Runs Prettier and ESLint.\
+Runs Prettier check and ESLint.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
