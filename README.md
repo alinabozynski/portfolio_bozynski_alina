@@ -9,6 +9,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Run this application on localhost:5575
 
+### Pull and run the application image from my Hub.
+
+Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.\
+
+```
+docker pull abozynski/portfolio_bozynski_alina
+```
+
+```
+docker run --name <desired_container_name> -it -p 5575:80 --rm abozynski/portfolio_bozynski_alina
+```
+
+Now open localhost:5575 in a browser!
+
 ### Run with npm
 
 Clone this repository and change into it's root directory.\
@@ -38,26 +52,12 @@ If you receive the error, 'Error: error:0308010C:digital envelope routines::unsu
 - Powershell: `$env:NODE_OPTIONS = "--openssl-legacy-provider"`
   If the above doesn't work, try to use the current LTS version from [Node.js](https://nodejs.org/en/download/releases).
 
-### Run from Docker container
+### Run from your own Docker container
 
 Clone repository with directions above and navigate to the root directory.\
 Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.\
 To create a Docker image, run: `docker build -t <desired_image_name> .`\
 Then run the image as a container: `docker run --name <desired_container_name> -it -p 5575:80 --rm <image_name>`\
-Now open localhost:5575 in a browser!
-
-## Pull and run the application image from my Hub.
-
-Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.\
-
-```
-docker pull abozynski/portfolio_bozynski_alina
-```
-
-```
-docker run --name <desired_container_name> -it -p 5575:80 --rm abozynski/portfolio_bozynski_alina
-```
-
 Now open localhost:5575 in a browser!
 
 ## Available Scripts
